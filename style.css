@@ -1,0 +1,61 @@
+body {
+    scrollbar-width: 5px;
+    scrollbar-color: black;
+  }
+
+  /* For Webkit-based browsers (Chrome, Safari and Opera) */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  body::-webkit-scrollbar-track {
+    color: black;
+  }
+
+  .project-scroll {
+    scrollbar-width: 5px;
+    scrollbar-color: black;
+  }
+
+  .project-scroll::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .project-scroll::-webkit-scrollbar-track {
+    color: black;
+  }
+
+  span.effect {
+    transform: scaleX(0);
+  }
+
+  .nav-button:hover span.effect {
+    transform: scaleX(0.5);
+  }
+
+  .nav-button.active {
+    color: rgb(74, 222, 128);
+  }
+
+  .nav-button.active span.effect {
+    background-image: linear-gradient(to left, var(--tw-gradient-stops));
+    transform: scaleX(0.5);
+  }
+
+  .decor {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+
+  .tecnology {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  }

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Khasanport</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    class="overflow-x-hidden dark:bg-slate-800 dark:text-white transition duration-300"
+  >
+    <div
+      class="container-fluid relative m-auto text-xs md:text-sm lg:text-md xl:text-lg"
+    >
+      <div
+        class="show hidden fixed bg-transparent backdrop-blur-md z-50 px-10 py-5 flex justify-center items-center w-full h-screen duration-300 transition"
+        data-aos="fade-up"
+      >
+        <div
+          class="w-max h-screen bg-slate-200 p-4 box-border flex justify-center items-center"
+        >
+          <button
+            class="x absolute right-10 top-10 px-4 py-2 rounded-full hover:font-extrabold font-semibold border hover:bg-slate-200 transition duration-300 bg-white text-black"
+          >
+            X
+          </button>
+          <img
+            loading="lazy"
+            src="img/sertifikat/Garuda_B_11zon.webp"
+            alt=""
+            class="isian w-max h-screen object-contain"
+          />
+        </div>
+      </div>
+
+      <nav
+        data-aos="fade-down"
+        data-aos-duration="300"
+        id="Navbar"
+        class="fixed right-0 left-0 top-0 w-full h-14 md:h-16 flex items-center px-4 md:px-6 justify-between transition duration-300 z-30"
+      >
+        <h1 class="font-bold text-2xl italic text-white relative z-30">
+          Khasan<span class="text-green-500">port</span>
+        </h1>
+        <button
+          class="btnDark dark:bg-green-200 bg-green-400 w-10 h-10 rounded-full flex items-center justify-center text-white dark:text-black hover:bg-green-600 transition duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-moon-filled"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <title>Dark Mode</title>
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z"
+              stroke-width="0"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </button>
+        <div class="flex">
+          <button
+            id="btnLang"
+            class="btnDark dark:bg-green-200 relative border-2 bg-green-400 w-10 h-10 rounded-full flex items-center justify-center text-white dark:text-black hover:bg-green-600 transition duration-300 order-1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-language"
+            >
+              <title>Translate</title>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M4 5h7" />
+              <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+              <path d="M5 9c0 2.144 2.952 3.908 6.7 4" />
+              <path d="M12 20l4 -9l4 9" />
+              <path d="M19.1 18h-6.2" />
+            </svg>
+          </button>
+          <button
+            class="bg-green-600 dark:bg-green-400 h-10 flex items-center justify-center dark:text-black hover:bg-green-900 transition duration-300 text-white rounded-full px-2 py-1 border-2 border-sky-400 -ml-10 order-2"
+          >
+            <select
+              name="lang"
+              id="lang"
+              class="bg-transparent object-fit pl-12 focus:outline-none"
+            >
+              <option value="English" class="text-black" id="eng">
+                English
+              </option>
+              <option value="Indonesia" class="text-black" id="ind">
+                Indonesia
+              </option>
+            </select>
+          </button>
+        </div>
+        <div
+          class="button-group border-l border-black -mr-20 md:m-0 md:border-0 transition flex justify-end duration-300 translate-x-full md:translate-x-0 text-xl md:text-sm md:flex md:justify-end gap-2 md:gap-5 text-white md:mr-20 md:p-0 fixed md:static top-0 right-0 left-0 bottom-0 px-6 py-2 pt-14"
+        >
+          <div
+            class="ai fixed md:static top-0 bottom-0 right-0 left-0 bg-transparent backdrop-blur-md md:hidden"
+          ></div>
+          <div
+            class="w-3/4 md:flex gap-5 bg-white md:bg-transparent px-4 py-2 relative md:static"
+          >
+            <button
+              class="btn-Home text-black md:text-white w-full md:w-max hover:text-green-400 transition duration-300 py-2 md:text-lg nav-button flex flex-wrap"
+            >
+              <a href="#" class="w-full flex home"> Home </a>
+              <span
+                class="effect self-justify-start w-full h-1 bg-gradient-to-r from-green-300 to-green-800 flex rounded-full transition duration-300"
+              ></span>
+            </button>
+            <button
+              class="btn-About text-black md:text-white w-full md:w-max hover:text-green-400 transition duration-300 py-2 md:text-lg nav-button flex flex-wrap"
+            >
+              <a href="#About" class="w-full flex about"> About </a>
+              <span
+                class="effect self-justify-start w-full h-1 bg-gradient-to-r from-green-300 to-green-800 flex rounded-full transition duration-300"
+              ></span>
+            </button>
+            <button
+              class="btn-Project text-black md:text-white w-full md:w-max hover:text-green-400 transition duration-300 py-2 md:text-lg nav-button flex flex-wrap"
+            >
+              <a href="#Project" class="w-full flex project"> Project </a>
+              <span
+                class="effect self-justify-start w-full h-1 bg-gradient-to-r from-green-300 to-green-800 flex rounded-full transition duration-300"
+              ></span>
+            </button>
+            <button
+              class="btn-Contact text-black md:text-white w-full md:w-max hover:text-green-400 transition duration-300 py-2 md:text-lg nav-button flex flex-wrap"
+            >
+              <a href="#Contact" class="w-full flex contact"> Contact </a>
+              <span
+                class="effect self-justify-start w-full h-1 bg-gradient-to-r from-green-300 to-green-800 flex rounded-full transition duration-300"
+              ></span>
+            </button>
+          </div>
+        </div>
+        <div class="toogle w-10 h-10 flex flex-wrap md:hidden z-20">
+          <span class="w-full bg-white h-1"></span>
+          <span class="w-full bg-white h-1"></span>
+          <span class="w-full bg-white h-1"></span>
+        </div>
+      </nav>
+
+      <section
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        id="Hero"
+        class="relative"
+      >
+        <img
+          src="img/portfoliobg.jpg"
+          alt="background"
+          class="w-full h-full object-cover absolute"
+        />
+        <div
+          class="px-4 relative z-10 flex flex-wrap lg:flex-nowrap justify-around items-center pt-10 lg:pt-14 bg-transparent"
+        >
+          <article
+            class="lg:w-50% text-white pt-10 lg:pt-16 order-2 lg:order-1"
+          >
+            <h1 class="my-2 text-white text-3xl lg:text-5xl font-bold">
+              Adi Akhmad Khasan<span class="my-2 text-green-400">port</span>
+            </h1>
+            <h2
+              class="text-slate-300 font-normal w-full text-center text-2xl my-5"
+            >
+              <span
+                class="my-2 text-green-400 hover:scale-125 transition duration-300 programer"
+                id="typed"
+              ></span>
+              || WEB
+            </h2>
+            <p
+              class="hidden lg:block lg:text-lg font-normal text-slate-300 px-4"
+              id="hero_1"
+            >
+              Hello, I am a programmer web. I master HTML, CSS, Javascript, and
+              <span class="my-2 text-green-400">PHP</span>.
+            </p>
+            <p
+              class="hidden lg:block lg:text-lg font-normal text-slate-300 px-4"
+              id="hero_2"
+            >
+              <span class="my-2 text-green-400">Laravel</span>, React JS, and
+              Tailwindcss is my mainstay.
+            </p>
+            <p
+              class="hidden lg:block lg:text-lg font-normal text-slate-300 px-4 mt-10"
+              id="hero_3"
+            >
+              This year <span class="tahun"></span>, my age is
+              <span class="umur text-green-400"></span>
+            </p>
+            <p class="lg:text-lg font-normal text-slate-300 px-4" id="hero_4">
+              Come on, check out my social media below
+            </p>
+            <div class="w-full flex gap-2 lg:gap-5 justify-around items-center">
+              <button
+                class="text-lg lg:text-xl w-2/5 portfolio my-2 lg:mt-10 lg:w-full px-4 py-2 bg-green-400 hover:border-transparent border-2 transition duration-300 hover:bg-green-500 hover:text-white font-semibold hover:italic border-green-300 rounded-full bg-opacity-70"
+              >
+                <a href="#Contact" class="contact"> Contact </a>
+              </button>
+              <button
+                class="text-sm lg:text-xl w-2/5 portfolio my-2 lg:mt-10 lg:w-full px-4 py-2 bg-slate-400 hover:border-transparent border-2 transition duration-300 hover:bg-green-500 hover:text-white font-semibold hover:italic border-green-300 rounded-full bg-opacity-70"
+              >
+                <a href="#About" class="cv"> Download CV </a>
+              </button>
+            </div>
+
+            <div class="my-2 flex items-center justify-center gap-0 w-full">
+              <a
+                href="#"
+                target="_blank"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="p-2 lg:p-4 scale-100 transition duuration-300 box-content fill-current"
+                  width="30"
+                >
+                  <title>YouTube</title>
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                target="_blank"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="p-2 lg:p-4 scale-100 transition duration-300 box-content fill-current"
+                  width="30"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://wa.me/+6285793570703"
+                target="_blank"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="p-2 lg:p-4 scale-100 transition duuration-300 box-content fill-current"
+                  width="30"
+                >
+                  <title>WhatsApp</title>
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                target="_blank"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="p-2 lg:p-5 transition duration-300 box-content scale-150"
+                >
+                  <title>Linked In</title>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                  ></path>
+                  <path
+                    d="M8 11l0 5 M8 8l0 .01 M12 16l0 -5 M16 16v-3a2 2 0 0 0 -4 0"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+          <div class="w-full order-1 lg:order-2 lg:w-2/5 flex justify-center">
+            <img
+              loading="lazy"
+              src="img/profile.webp"
+              class="w-1/2 lg:w-4/5"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        id="About"
+        class="w-full flex flex-wrap lg:flex-nowrap px-4 lg:px-20 m-auto py-16"
+      >
+        <article class="w-full lg:w-1/2 px-4 py-2" id="about_1">
+          <h2
+            class="text-xl lg:text-3xl font-bold italic mb-2 decoration-double decoration-green-400 underline"
+          >
+            Khasan<span class="text-green-600">port!</span>
+          </h2>
+          <p class="pl-4">Hallo!, I'am from Indonesia</p>
+          <p class="pl-4">
+            I'am Programer. and has done for 2 year of study self-taught about
+            web programing language
+          </p>
+          <p class="pl-4">Need a network technician or programer? Contact me</p>
+        </article>
+        <article class="w-full lg:w-1/2 px-4 py-2" id="about_2">
+          <h2
+            class="text-xl lg:text-3xl font-bold italic mb-2 decoration-double decoration-green-400 underline"
+          >
+            Serv<span class="text-green-600">ices Skill</span>
+          </h2>
+          <ol class="pl-4 list-decimal">
+            <li class="pl-4">Troubleshooting Network</li>
+            <li class="pl-4">Create web pages</li>
+            <li class="pl-4">Fix Bug</li>
+            <li class="flex">
+              <div
+                href="#"
+                target="_blank"
+                class="scale-75 w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-orange-300 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="scale-150 transition duuration-300 box-content"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <title>Javascript</title>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                  <path d="M7.5 8h3v8l-2 -1"></path>
+                  <path
+                    d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                href="#"
+                target="_blank"
+                class="scale-75 w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-purple-500 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="scale-150 transition duuration-300 box-content"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <title>PHP</title>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M12 12m-10 0a10 9 0 1 0 20 0a10 9 0 1 0 -20 0"
+                  ></path>
+                  <path
+                    d="M5.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653"
+                  ></path>
+                  <path
+                    d="M15.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653"
+                  ></path>
+                  <path d="M12 7.5l-1 5.5"></path>
+                  <path d="M11.6 10h2.4l-.5 3"></path>
+                </svg>
+              </div>
+              <div
+                href="#"
+                target="_blank"
+                class="scale-75 w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-orange-400 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="scale-150 transition duuration-300 box-content"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <title>Python</title>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 9h-7a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h3"></path>
+                  <path
+                    d="M12 15h7a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-3"
+                  ></path>
+                  <path
+                    d="M8 9v-4a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v5a2 2 0 0 1 -2 2h-4a2 2 0 0 0 -2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2 -2v-4"
+                  ></path>
+                  <path d="M11 6l0 .01"></path>
+                  <path d="M13 18l0 .01"></path>
+                </svg>
+              </div>
+            </li>
+          </ol>
+        </article>
+      </section>
+
+      <section
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        id="Project"
+        class="pt-16 pb-10"
+      >
+        <div class="w-full">
+          <h2
+            class="w-full text-center text-2xl lg:text-3xl text-green-500 font-bold project"
+          >
+            Project
+          </h2>
+          <p
+            class="w-full text-center text-md text-slate-600 dark:text-white my-2"
+            id="project_1"
+          >
+            Here is
+            <a href="https://github.com/KhasanPort"
+              ><span class="my-2 text-green-400"> My Project </span></a
+            >
+            list
+          </p>
+        </div>
+        <ol class="list-none px-4 mt-10 overflow-x-auto gap-x-4 flex">
+          <a href="" target="_blank" class="">
+            <li
+              class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black"
+            >
+              <img
+                loading="lazy"
+                src=""
+                alt=""
+                class="object-cover w-80 h-40 hover:opacity-75 transition duration-300 foto"
+              />
+              <ol
+                class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
+              >
+                <a href="#Project">
+                  <li
+                    class="w-10 h-10 p-1 transition duration-300 hover:opacity-100"
+                  >
+                    <img
+                      loading="lazy"
+                      src=""
+                      alt=""
+                      title=""
+                      class="object-fit"
+                    />
+                  </li>
+                </a>
+                <div
+                  class="decor bg-green-400 absolute -left-10 w-10 h-full"
+                ></div>
+              </ol>
+            </li>
+          </a>
+        </ol>
+      </section>
+
+      <section
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        id="Certification"
+        class="pt-16 pb-16"
+      >
+        <div class="w-full">
+          <h2
+            class="w-full text-center text-2xl lg:text-3xl text-green-500 font-bold"
+          >
+            Certification
+          </h2>
+          <p
+            class="w-full text-center text-md text-slate-600 dark:text-white my-2"
+            id="certif_1"
+          >
+            My <span class="my-2 text-green-400">Good One</span> Certification
+          </p>
+        </div>
+        <ol
+          class="list-none px-4 mt-10 overflow-x-auto scrollbar-hide gap-x-4 flex"
+        >
+          <li
+            class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
+          >
+            <img
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              loading="lazy"
+              src="img/sertifikat/PKL_B_11zon.webp"
+              alt="Sertifkat PKL"
+              class="object-cover w-80 h-40 hover:opacity-75 transition duration-300 foto"
+            />
+            <ol
+              class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
+            >
+              <a href="#Project">
+                <p
+                  class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
+                >
+                  Sertifikat PKL
+                </p>
+              </a>
+              <div
+                class="decor bg-green-400 absolute -left-10 w-10 h-full"
+              ></div>
+            </ol>
+          </li>
+          <li
+            class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
+          >
+            <img
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              loading="lazy"
+              src="img/sertifikat/ITNSA_B_11zon.webp"
+              alt="Sertifikat Lomba ITNSA"
+              class="object-cover hover:opacity-75 transition duration-300 w-80 h-40 foto"
+            />
+            <ol
+              class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
+            >
+              <a href="#Project">
+                <p
+                  class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
+                >
+                  Lomba ITNSA
+                </p>
+              </a>
+              <div
+                class="decor bg-green-400 absolute -left-10 w-10 h-full"
+              ></div>
+            </ol>
+          </li>
+          <li
+            class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
+          >
+            <img
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              loading="lazy"
+              src="img/sertifikat/Garuda_B_11zon.webp"
+              alt="Pramuka Garuda"
+              class="object-cover hover:opacity-75 transition duration-300 w-80 h-40 foto"
+            />
+            <ol
+              class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
+            >
+              <a href="#Project">
+                <p
+                  class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
+                >
+                  Pramuka Garuda
+                </p>
+              </a>
+              <div
+                class="decor bg-green-400 absolute -left-10 w-10 h-full"
+              ></div>
+            </ol>
+          </li>
+          <li
+            class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
+          >
+            <img
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              loading="lazy"
+              src="img/sertifikat/IOT_B_11zon.webp"
+              alt="Lomba IOT"
+              class="object-cover hover:opacity-75 transition duration-300 w-80 h-40 foto"
+            />
+            <ol
+              class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
+            >
+              <a href="#Project">
+                <p
+                  class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
+                >
+                  Lomba IOT
+                </p>
+              </a>
+              <div
+                class="decor bg-green-400 absolute -left-10 w-10 h-full"
+              ></div>
+            </ol>
+          </li>
+          <li
+            class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
+          >
+            <img
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              loading="lazy"
+              src="img/sertifikat/Jambore_B_11zon.webp"
+              alt="Panitia Jambore Ranting"
+              class="object-cover hover:opacity-75 transition duration-300 w-80 h-40 foto"
+            />
+            <ol
+              class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
+            >
+              <a href="#Project">
+                <p
+                  class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
+                >
+                  Panitia Jambore Ranting
+                </p>
+              </a>
+              <div
+                class="decor bg-green-400 absolute -left-10 w-10 h-full"
+              ></div>
+            </ol>
+          </li>
+          <li
+            class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
+          >
+            <img
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              loading="lazy"
+              src="img/sertifikat/Omadata_B_11zon.webp"
+              alt="Kegiatan Berkunjung Omadata"
+              class="object-cover hover:opacity-75 transition duration-300 w-80 h-40 foto"
+            />
+            <ol
+              class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
+            >
+              <a href="#Project">
+                <p
+                  class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
+                >
+                  Kunjungan Omadata
+                </p>
+              </a>
+              <div
+                class="decor bg-green-400 absolute -left-10 w-10 h-full"
+              ></div>
+            </ol>
+          </li>
+        </ol>
+      </section>
+
+      <section
+        id="Raport"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        id="Contact"
+        class="w-full bg-slate-200 dark:bg-slate-400 m-auto py-5 px-4"
+      >
+      <button class="w-full h-full font-bold text-2xl hover:bg-slate-800 transition duration-300 bg-black px-4 py-2">
+        Vocational School Report Card Value
+      </button>
+    </section>
+      
+      <section
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        id="Contact"
+        class="w-full bg-slate-400 dark:bg-slate-600 m-auto py-16 px-4 dark:text-black"
+      >
+        <div class="w-full">
+          <h2
+            class="w-full text-center text-2xl lg:text-3xl text-green-400 font-bold"
+          >
+            Contact
+          </h2>
+          <p
+            class="w-full text-center text-md text-slate-600 dark:text-white my-2"
+            id="contact_1"
+          >
+            You can call <span class="my-2 text-green-400">me</span> in the way
+            below
+          </p>
+        </div>
+        <!-- <form       
+          action=""
+          method="POST"
+          class="w-full flex flex-wrap gap-2 justify-center my-10"
+        >
+          <div
+            class="w-full px-4 py-2 lg:px-0 lg:w-2/3 grid grid-cols-12 font-semibold"
+          >
+            <label for="Nama" class="dark:text-white col-span-2"> Name </label>
+            <label for="Nama" class="dark:text-white">:</label>
+            <input
+              type="text"
+              id="Nama"
+              name="Nama"
+              placeholder="Nama"
+              required
+              class="w-full col-span-9 px-2 py-1 focus:outline-0 focus:border-green-400 border border-transparent transition duration-300"
+            />
+          </div>
+          <div
+            class="w-full px-4 py-2 lg:px-0 lg:w-2/3 grid grid-cols-12 font-semibold"
+          >
+            <label for="Email" class="dark:text-white col-span-2">
+              Email
+            </label>
+            <label for="Email" class="dark:text-white">:</label>
+            <input
+              type="email"
+              id="Email"
+              name="Email"
+              placeholder="Email"
+              required
+              class="w-full col-span-9 px-2 py-1 focus:outline-0 focus:border-green-400 border border-transparent transition duration-300"
+            />
+          </div>
+          <div
+            class="w-full px-4 py-2 lg:px-0 lg:w-2/3 grid grid-cols-12 font-semibold"
+          >
+            <label for="Pesan" class="dark:text-white col-span-2">
+              Message
+            </label>
+            <label for="Pesan" class="dark:text-white">:</label>
+            <textarea
+              name="Pesan"
+              id="Pesan"
+              cols="20"
+              rows="10"
+              placeholder="Message"
+              required
+              class="w-full col-span-9 px-2 py-1 focus:outline-0 focus:border-green-400 border border-transparent transition duration-300"
+            ></textarea>
+          </div>
+          <div class="w-full lg:w-2/3 flex justify-end">
+            <button
+              type="submit"
+              class="text-white text-md lg:text-xl w-max px-4 py-2 bg-green-400 hover:border-transparent border-2 transition duration-300 hover:bg-green-500 hover:text-white font-semibold hover:italic border-green-300 rounded-full"
+            >
+              Submit
+            </button>
+          </div>
+        </form> -->
+      </section>
+
+      <footer id="Footer" class="w-full bg-black text-white">
+        <div class="flex justify-center px-4 py-2 pb-20 text-sm lg:text-md">
+          <div class="w-1/2 lg:1/3 px-4">
+            <h2 class="font-bold text-2xl italic text-white my-4">
+              Khasan<span class="text-green-500">port</span>
+            </h2>
+            <p class="ml-4">Makam II Road</p>
+            <p class="ml-4">Balapulang Wetan Village</p>
+            <p class="ml-4">Subdistrict Balapulang</p>
+            <p class="ml-4">Regency Tegal</p>
+            <p class="ml-4">Province Jawa Tengah</p>
+            <p class="ml-4">Indonesia</p>
+          </div>
+          <div class="w-1/2 lg:1/3 px-4">
+            <h2 class="font-bold text-2xl italic text-white"></h2>
+            <ol>
+              <li></li>
+            </ol>
+          </div>
+          <div class="w-1/2 lg:1/3 px-4">
+            <h2 class="font-bold text-2xl italic text-white"></h2>
+            <ol>
+              <li></li>
+            </ol>
+          </div>
+        </div>
+        <div class="w-full flex flex-wrap justify-center items-center">
+          <div class="w-full flex justify-center items-center">
+            <div
+              class="my-2 flex items-center justify-center sm:justify-center gap-0 flex-wrap lg:flex-nowrap w-11/12 lg:w-2/5"
+            >
+              <a
+                href="#"
+                target="_blank"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="p-2 lg:p-4 scale-100 transition duuration-300 box-content fill-current"
+                  width="30"
+                >
+                  <title>YouTube</title>
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                target="_blank"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="p-2 lg:p-4 scale-100 transition duration-300 box-content fill-current"
+                  width="30"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="wa.me/+6285793570703"
+                target="_blank"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="p-2 lg:p-4 scale-100 transition duuration-300 box-content fill-current"
+                  width="30"
+                >
+                  <title>WhatsApp</title>
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                target="_blank"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="p-2 lg:p-5 transition duration-300 box-content scale-150"
+                >
+                  <title>Linked In</title>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                  ></path>
+                  <path
+                    d="M8 11l0 5 M8 8l0 .01 M12 16l0 -5 M16 16v-3a2 2 0 0 0 -4 0"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="text-xs lg:text-lg my-4">
+            @copyright by
+            <span class="text-green-400 font-bold"> Adi Akhmad Khasan </span>
+            with <span class="text-sky-400 font-bold">Tailwindcss</span>
+          </h3>
+        </div>
+      </footer>
+    </div>
+    <div class="show-raport fixed z-50 top-0 right-0 left-0 bottom-0 bg-black px-5 py-2">
+      Makanan
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/script_a.js"></script>
+    <script src="js/script_b.js"></script>
+    <script src="js/script_c.js"></script>
+  </body>
+</html>
