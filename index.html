@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Khasanport</title>
+    <link rel="preload" as="image" href="img/portfoliobg.jpg">
+    <link rel="preload" as="image" href="img/profile.webp">
+    <link rel="preload" as="image" href="img/sertifikat/Asociate Data Scientist.webp">
+    <link rel="preload" as="image" href="img/sertifikat/Sertifikat Kompetensi.webp">
+    <link rel="preload" as="image" href="img/sertifikat/Sertifikat Telkom.jpg">
+    <link rel="preload" as="image" href="img/sertifikat/Garuda_B_11zon.webp">
+    <link rel="preload" as="image" href="img/sertifikat/ITNSA_B_11zon.webp">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -14,10 +21,10 @@
   </head>
 
   <body
-    class="overflow-x-hidden dark:bg-slate-800 dark:text-white transition duration-300"
+    class="overflow-x-hidden bg-slate-200 dark:bg-slate-800 dark:text-white transition duration-300"
   >
     <div
-      class="container-fluid relative m-auto text-xs md:text-sm lg:text-md xl:text-lg"
+      class="container-fluid relative m-auto text-xs md:text-sm md:text-md xl:text-md"
     >
       <div
         class="show hidden fixed bg-transparent backdrop-blur-md z-50 px-10 py-5 flex justify-center items-center w-full h-screen duration-300 transition"
@@ -44,19 +51,19 @@
         data-aos="fade-down"
         data-aos-duration="300"
         id="Navbar"
-        class="fixed right-0 left-0 top-0 w-full h-14 md:h-16 flex items-center px-4 md:px-6 justify-between transition duration-300 z-30"
+        class="fixed m-auto right-0 left-0 top-0 w-full h-14 md:h-16 flex items-center px-4 md:px-6 justify-between transition duration-300 z-30"
       >
-        <h1 class="font-bold text-2xl italic text-white relative z-30">
+        <h1
+          class="font-bold text-xl sm:text-md md:text-2xl italic text-white relative z-30 flex justify-center items-end"
+        >
           Khasan<span class="text-green-500">port</span>
         </h1>
         <button
-          class="btnDark dark:bg-green-200 bg-green-400 w-10 h-10 rounded-full flex items-center justify-center text-white dark:text-black hover:bg-green-600 transition duration-300"
+          class="btnDark dark:bg-green-200 bg-green-400 w-7 h-7 md:w-10 md:h-10 rounded-full flex items-center justify-center text-white dark:text-black hover:bg-green-600 transition duration-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-moon-filled"
-            width="24"
-            height="24"
+            class="icon icon-tabler icon-tabler-moon-filled w-5 h-5 md:w-7 md:h-7"
             viewBox="0 0 24 24"
             stroke-width="2"
             stroke="currentColor"
@@ -73,22 +80,20 @@
             ></path>
           </svg>
         </button>
-        <div class="flex">
+        <div class="flex mx-2 ">
           <button
             id="btnLang"
-            class="btnDark dark:bg-green-200 relative border-2 bg-green-400 w-10 h-10 rounded-full flex items-center justify-center text-white dark:text-black hover:bg-green-600 transition duration-300 order-1"
+            class="btnDark dark:bg-green-200 relative border-2 bg-green-400 w-7 h-7 md:w-10 md:h-10 rounded-full flex items-center justify-center text-white dark:text-black hover:bg-green-600 transition duration-300 order-1 z-20"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-language"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-language w-5 h-5 md:w-7 md:h-7"
             >
               <title>Translate</title>
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -100,33 +105,33 @@
             </svg>
           </button>
           <button
-            class="bg-green-600 dark:bg-green-400 h-10 flex items-center justify-center dark:text-black hover:bg-green-900 transition duration-300 text-white rounded-full px-2 py-1 border-2 border-sky-400 -ml-10 order-2"
+            class="bg-green-600 dark:bg-green-400 relative h-7 md:h-10 flex items-center justify-center dark:text-black hover:bg-green-900 transition duration-300 text-white rounded-full p-0 md:px-2 md:py-1 border-2 border-sky-400 -ml-10 order-2"
           >
             <select
               name="lang"
               id="lang"
-              class="bg-transparent object-fit pl-12 focus:outline-none"
+              class="bg-transparent object-fit md:pl-10 focus:outline-none w-1 md:w-max"
             >
-              <option value="English" class="text-black" id="eng">
+              <option value="English" class="text-black font-semibold" id="eng">
                 English
               </option>
-              <option value="Indonesia" class="text-black" id="ind">
+              <option
+                value="Indonesia"
+                class="text-black font-semibold"
+                id="ind"
+              >
                 Indonesia
               </option>
             </select>
           </button>
         </div>
         <div
-          class="button-group border-l border-black -mr-20 md:m-0 md:border-0 transition flex justify-end duration-300 translate-x-full md:translate-x-0 text-xl md:text-sm md:flex md:justify-end gap-2 md:gap-5 text-white md:mr-20 md:p-0 fixed md:static top-0 right-0 left-0 bottom-0 px-6 py-2 pt-14"
+          class="button-group transition flex justify-center duration-300 translate-x-full md:translate-x-0 text-xl md:text-sm md:flex md:justify-end gap-2 md:gap-5 text-white md:mr-20 md:p-0 fixed md:static top-0 right-0 left-0 bottom-0 px-6 py-2 pt-14"
         >
-          <div
-            class="ai fixed md:static top-0 bottom-0 right-0 left-0 bg-transparent backdrop-blur-md md:hidden"
-          ></div>
-          <div
-            class="w-3/4 md:flex gap-5 bg-white md:bg-transparent px-4 py-2 relative md:static"
-          >
+          <div class="ai fixed w-screen h-screen bg-transparent backdrop-blur-md md:hidden"></div>
+          <div class="w-3/4 md:flex gap-5 px-4 py-2 relative md:static text-black dark:text-white">
             <button
-              class="btn-Home text-black md:text-white w-full md:w-max hover:text-green-400 transition duration-300 py-2 md:text-lg nav-button flex flex-wrap"
+              class="btn-Home text-black dark:text-white dark:hover:text-green-400 md:text-white w-full md:w-max hover:text-green-400 transition duration-300 py-2 md:text-md nav-button flex flex-wrap justify-start"
             >
               <a href="#" class="w-full flex home"> Home </a>
               <span
@@ -134,7 +139,7 @@
               ></span>
             </button>
             <button
-              class="btn-About text-black md:text-white w-full md:w-max hover:text-green-400 transition duration-300 py-2 md:text-lg nav-button flex flex-wrap"
+              class="btn-About text-black dark:text-white dark:hover:text-green-400 md:text-white w-full md:w-max hover:text-green-400 transition duration-300 py-2 md:text-md nav-button flex flex-wrap"
             >
               <a href="#About" class="w-full flex about"> About </a>
               <span
@@ -142,15 +147,15 @@
               ></span>
             </button>
             <button
-              class="btn-Project text-black md:text-white w-full md:w-max hover:text-green-400 transition duration-300 py-2 md:text-lg nav-button flex flex-wrap"
+              class="btn-Project text-black dark:text-white dark:hover:text-green-400 md:text-white w-full md:w-max hover:text-green-400 transition duration-300 py-2 md:text-md nav-button flex flex-wrap"
             >
-              <a href="#Project" class="w-full flex project"> Project </a>
+              <a href="#Certification" class="w-full flex project"> Project </a>
               <span
                 class="effect self-justify-start w-full h-1 bg-gradient-to-r from-green-300 to-green-800 flex rounded-full transition duration-300"
               ></span>
             </button>
             <button
-              class="btn-Contact text-black md:text-white w-full md:w-max hover:text-green-400 transition duration-300 py-2 md:text-lg nav-button flex flex-wrap"
+              class="btn-Contact text-black dark:text-white dark:hover:text-green-400 md:text-white w-full md:w-max hover:text-green-400 transition duration-300 py-2 md:text-md nav-button flex flex-wrap"
             >
               <a href="#Contact" class="w-full flex contact"> Contact </a>
               <span
@@ -159,7 +164,7 @@
             </button>
           </div>
         </div>
-        <div class="toogle w-10 h-10 flex flex-wrap md:hidden z-20">
+        <div class="toogle w-8 h-8 flex flex-wrap md:hidden z-20 px-1">
           <span class="w-full bg-white h-1"></span>
           <span class="w-full bg-white h-1"></span>
           <span class="w-full bg-white h-1"></span>
@@ -170,7 +175,7 @@
         data-aos="fade-up"
         data-aos-duration="1000"
         id="Hero"
-        class="relative"
+        class="relative m-auto"
       >
         <img
           src="img/portfoliobg.jpg"
@@ -178,12 +183,12 @@
           class="w-full h-full object-cover absolute"
         />
         <div
-          class="px-4 relative z-10 flex flex-wrap lg:flex-nowrap justify-around items-center pt-10 lg:pt-14 bg-transparent"
+          class="px-4 relative z-10 flex flex-wrap md:flex-nowrap justify-around items-center pt-10 md:pt-14 bg-transparent"
         >
           <article
-            class="lg:w-50% text-white pt-10 lg:pt-16 order-2 lg:order-1"
+            class="md:w-1/2 text-white pt-10 md:pt-16 order-2 md:order-1"
           >
-            <h1 class="my-2 text-white text-3xl lg:text-5xl font-bold">
+            <h1 class="my-2 text-white text-3xl md:text-5xl font-bold text-center">
               Adi Akhmad Khasan<span class="my-2 text-green-400">port</span>
             </h1>
             <h2
@@ -196,39 +201,44 @@
               || WEB
             </h2>
             <p
-              class="hidden lg:block lg:text-lg font-normal text-slate-300 px-4"
+              class="hidden md:block md:text-md font-normal text-slate-300 px-4"
               id="hero_1"
             >
               Hello, I am a programmer web. I master HTML, CSS, Javascript, and
               <span class="my-2 text-green-400">PHP</span>.
             </p>
             <p
-              class="hidden lg:block lg:text-lg font-normal text-slate-300 px-4"
+              class="hidden md:block md:text-md font-normal text-slate-300 px-4"
               id="hero_2"
             >
               <span class="my-2 text-green-400">Laravel</span>, React JS, and
               Tailwindcss is my mainstay.
             </p>
             <p
-              class="hidden lg:block lg:text-lg font-normal text-slate-300 px-4 mt-10"
+              class="hidden md:block md:text-md font-normal text-slate-300 px-4 mt-10"
               id="hero_3"
             >
               This year <span class="tahun"></span>, my age is
               <span class="umur text-green-400"></span>
             </p>
-            <p class="lg:text-lg font-normal text-slate-300 px-4" id="hero_4">
+            <p class="md:text-md font-normal text-slate-300 px-4" id="hero_4">
               Come on, check out my social media below
             </p>
-            <div class="w-full flex gap-2 lg:gap-5 justify-around items-center">
+            <div class="w-full flex gap-2 md:gap-5 justify-around items-center">
               <button
-                class="text-lg lg:text-xl w-2/5 portfolio my-2 lg:mt-10 lg:w-full px-4 py-2 bg-green-400 hover:border-transparent border-2 transition duration-300 hover:bg-green-500 hover:text-white font-semibold hover:italic border-green-300 rounded-full bg-opacity-70"
+                class="text-md md:text-xl w-2/5 portfolio my-2 md:mt-10 md:w-full px-4 py-2 bg-green-400 hover:border-transparent border-2 transition duration-300 hover:bg-green-500 hover:text-white font-semibold hover:italic border-green-300 rounded-full bg-opacity-70"
               >
                 <a href="#Contact" class="contact"> Contact </a>
               </button>
               <button
-                class="text-sm lg:text-xl w-2/5 portfolio my-2 lg:mt-10 lg:w-full px-4 py-2 bg-slate-400 hover:border-transparent border-2 transition duration-300 hover:bg-green-500 hover:text-white font-semibold hover:italic border-green-300 rounded-full bg-opacity-70"
+                class="text-sm md:text-xl w-2/5 portfolio my-2 md:mt-10 md:w-full px-4 py-2 bg-slate-400 hover:border-transparent border-2 transition duration-300 hover:bg-green-500 hover:text-white font-semibold hover:italic border-green-300 rounded-full bg-opacity-70"
               >
-                <a href="#About" class="cv"> Download CV </a>
+                <a
+                  href="https://drive.google.com/drive/folders/1fT4tHHZ1gO-CZ7E0evZN3FFX-jOBxwic"
+                  class="cv"
+                >
+                  Download CV
+                </a>
               </button>
             </div>
 
@@ -236,13 +246,13 @@
               <a
                 href="#"
                 target="_blank"
-                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 md:w-20 md:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
               >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="p-2 lg:p-4 scale-100 transition duuration-300 box-content fill-current"
+                  class="p-2 md:p-4 scale-150 md:scale-110 md:scale-100 transition duuration-300 box-content fill-current"
                   width="30"
                 >
                   <title>YouTube</title>
@@ -255,13 +265,13 @@
               <a
                 href="#"
                 target="_blank"
-                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 md:w-20 md:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
               >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="p-2 lg:p-4 scale-100 transition duration-300 box-content fill-current"
+                  class="p-2 md:p-4 scale-150 md:scale-110 md:scale-100 transition duration-300 box-content fill-current"
                   width="30"
                 >
                   <title>Instagram</title>
@@ -272,15 +282,40 @@
               </a>
 
               <a
+                href="https://www.tiktok.com/@khasanport"
+                target="_blank"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 md:w-20 md:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="p-2 md:p-4 scale-150 md:scale-110 md:scale-100 transition duuration-300 box-content fill-current"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#2c3e50"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <title>Tiktok</title>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"
+                  />
+                </svg>
+              </a>
+
+              <a
                 href="https://wa.me/+6285793570703"
                 target="_blank"
-                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 md:w-20 md:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
               >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="p-2 lg:p-4 scale-100 transition duuration-300 box-content fill-current"
+                  class="p-2 md:p-4 scale-150 md:scale-110 md:scale-100 transition duuration-300 box-content fill-current"
                   width="30"
                 >
                   <title>WhatsApp</title>
@@ -289,41 +324,13 @@
                   />
                 </svg>
               </a>
-
-              <a
-                href="#"
-                target="_blank"
-                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="p-2 lg:p-5 transition duration-300 box-content scale-150"
-                >
-                  <title>Linked In</title>
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
-                  ></path>
-                  <path
-                    d="M8 11l0 5 M8 8l0 .01 M12 16l0 -5 M16 16v-3a2 2 0 0 0 -4 0"
-                  ></path>
-                </svg>
-              </a>
             </div>
           </article>
-          <div class="w-full order-1 lg:order-2 lg:w-2/5 flex justify-center">
+          <div class="w-1/2 order-1 md:order-2 md:w-2/5 flex justify-center">
             <img
               loading="lazy"
               src="img/profile.webp"
-              class="w-1/2 lg:w-4/5"
+              class="w-96"
               alt=""
             />
           </div>
@@ -334,11 +341,11 @@
         data-aos="fade-up"
         data-aos-duration="1000"
         id="About"
-        class="w-full flex flex-wrap lg:flex-nowrap px-4 lg:px-20 m-auto py-16"
+        class="w-full container m-auto flex flex-wrap md:flex-nowrap px-4 md:px-20 py-16"
       >
-        <article class="w-full lg:w-1/2 px-4 py-2" id="about_1">
+        <article class="w-full md:w-1/2 px-4 py-2" id="about_1">
           <h2
-            class="text-xl lg:text-3xl font-bold italic mb-2 decoration-double decoration-green-400 underline"
+            class="text-xl md:text-3xl font-bold italic mb-2 decoration-double decoration-green-400 underline"
           >
             Khasan<span class="text-green-600">port!</span>
           </h2>
@@ -349,9 +356,9 @@
           </p>
           <p class="pl-4">Need a network technician or programer? Contact me</p>
         </article>
-        <article class="w-full lg:w-1/2 px-4 py-2" id="about_2">
+        <article class="w-full md:w-1/2 px-4 py-2" id="about_2">
           <h2
-            class="text-xl lg:text-3xl font-bold italic mb-2 decoration-double decoration-green-400 underline"
+            class="text-xl md:text-3xl font-bold italic mb-2 decoration-double decoration-green-400 underline"
           >
             Serv<span class="text-green-600">ices Skill</span>
           </h2>
@@ -363,11 +370,11 @@
               <div
                 href="#"
                 target="_blank"
-                class="scale-75 w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-orange-300 transition duration-300 opacity-70 hover:opacity-100"
+                class="scale-75 w-10 h-10 md:w-14 md:h-14 md:w-20 md:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-orange-300 transition duration-300 opacity-70 hover:opacity-100"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="scale-150 transition duuration-300 box-content"
+                  class="scale-150 md:scale-110 md:scale-150 transition duuration-300 box-content"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -389,11 +396,11 @@
               <div
                 href="#"
                 target="_blank"
-                class="scale-75 w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-purple-500 transition duration-300 opacity-70 hover:opacity-100"
+                class="scale-75 w-10 h-10 md:w-14 md:h-14 md:w-20 md:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-purple-500 transition duration-300 opacity-70 hover:opacity-100"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="scale-150 transition duuration-300 box-content"
+                  class="scale-150 md:scale-110 md:scale-150 transition duuration-300 box-content"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -421,11 +428,11 @@
               <div
                 href="#"
                 target="_blank"
-                class="scale-75 w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-orange-400 transition duration-300 opacity-70 hover:opacity-100"
+                class="scale-75 w-10 h-10 md:w-14 md:h-14 md:w-20 md:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-orange-400 transition duration-300 opacity-70 hover:opacity-100"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="scale-150 transition duuration-300 box-content"
+                  class="scale-150 md:scale-110 md:scale-150 transition duuration-300 box-content"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -457,11 +464,11 @@
         data-aos="fade-up"
         data-aos-duration="1000"
         id="Project"
-        class="pt-16 pb-10"
+        class="pt-16 container m-auto pb-10"
       >
         <div class="w-full">
           <h2
-            class="w-full text-center text-2xl lg:text-3xl text-green-500 font-bold project"
+            class="w-full text-center text-2xl md:text-3xl text-green-500 font-bold project"
           >
             Project
           </h2>
@@ -475,38 +482,56 @@
             >
             list
           </p>
+          <button class="w-full flex justify-center items-center">
+            <a
+              href="https://github.com/KhasanPort"
+              class="flex justify-center items-center text-center stroke-black hover:bg-black hover:border-none hover:stroke-white dark:hover:bg-white dark:hover:border-none dark:border-white dark:stroke-white dark:hover:stroke-black transition duration-500 px-4 py-2 w-20 h-7 md:h-10 md:h-10 md:w-32 border border-black rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="scale-50 transition duuration-300 box-content"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <title>Github</title>
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                />
+              </svg>
+            </a>
+          </button>
         </div>
-        <ol class="list-none px-4 mt-10 overflow-x-auto gap-x-4 flex">
-          <a href="" target="_blank" class="">
+        <ol
+          class="list-none px-4 mt-10 overflow-x-auto scrollbar-hide gap-x-4 flex"
+        >
+          <a href="https://khasanport.github.io/Whack-a-Mouse/" target="_blank">
             <li
-              class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black"
+              class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
             >
               <img
+                data-aos="fade-up"
+                data-aos-duration="1000"
                 loading="lazy"
-                src=""
-                alt=""
-                class="object-cover w-80 h-40 hover:opacity-75 transition duration-300 foto"
+                src="img/project/whack-a-mouse.png"
+                alt="Sertifkat PKL"
+                class="object-cover w-80 h-40 hover:opacity-75 transition duration-300"
               />
-              <ol
+              <div
                 class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
               >
-                <a href="#Project">
-                  <li
-                    class="w-10 h-10 p-1 transition duration-300 hover:opacity-100"
-                  >
-                    <img
-                      loading="lazy"
-                      src=""
-                      alt=""
-                      title=""
-                      class="object-fit"
-                    />
-                  </li>
-                </a>
+                <p
+                  class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
+                >
+                  Whack a Mouse
+                </p>
                 <div
                   class="decor bg-green-400 absolute -left-10 w-10 h-full"
                 ></div>
-              </ol>
+              </div>
             </li>
           </a>
         </ol>
@@ -516,11 +541,11 @@
         data-aos="fade-up"
         data-aos-duration="1000"
         id="Certification"
-        class="pt-16 pb-16"
+        class="pt-16 container m-auto pb-16"
       >
         <div class="w-full">
           <h2
-            class="w-full text-center text-2xl lg:text-3xl text-green-500 font-bold"
+            class="w-full text-center text-2xl md:text-3xl text-green-500 font-bold"
           >
             Certification
           </h2>
@@ -541,24 +566,76 @@
               data-aos="fade-up"
               data-aos-duration="1000"
               loading="lazy"
-              src="img/sertifikat/PKL_B_11zon.webp"
+              src="img/sertifikat/Asociate Data Scientist.webp"
               alt="Sertifkat PKL"
               class="object-cover w-80 h-40 hover:opacity-75 transition duration-300 foto"
             />
-            <ol
+            <div
               class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
             >
-              <a href="#Project">
+              <a href="#Certification">
                 <p
                   class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
                 >
-                  Sertifikat PKL
+                  Asociate Data Scientist
                 </p>
               </a>
               <div
                 class="decor bg-green-400 absolute -left-10 w-10 h-full"
               ></div>
-            </ol>
+            </div>
+          </li>
+          <li
+            class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
+          >
+            <img
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              loading="lazy"
+              src="img/sertifikat/Sertifikat Kompetensi.webp"
+              alt="Sertifkat PKL"
+              class="object-cover w-80 h-40 hover:opacity-75 transition duration-300 foto"
+            />
+            <div
+              class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
+            >
+              <a href="#Certification">
+                <p
+                  class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
+                >
+                  Asociate Data Scientist
+                </p>
+              </a>
+              <div
+                class="decor bg-green-400 absolute -left-10 w-10 h-full"
+              ></div>
+            </div>
+          </li>
+          <li
+            class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
+          >
+            <img
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              loading="lazy"
+              src="img/sertifikat/Sertifikat Telkom.jpg"
+              alt="Sertifkat PKL"
+              class="object-cover w-80 h-40 hover:opacity-75 transition duration-300 foto"
+            />
+            <div
+              class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
+            >
+              <a href="#Certification">
+                <p
+                  class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
+                >
+                  Asociate Data Scientist
+                </p>
+              </a>
+              <div
+                class="decor bg-green-400 absolute -left-10 w-10 h-full"
+              ></div>
+            </div>
           </li>
           <li
             class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
@@ -571,10 +648,10 @@
               alt="Sertifikat Lomba ITNSA"
               class="object-cover hover:opacity-75 transition duration-300 w-80 h-40 foto"
             />
-            <ol
+            <div
               class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
             >
-              <a href="#Project">
+              <a href="#Certification">
                 <p
                   class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
                 >
@@ -584,7 +661,7 @@
               <div
                 class="decor bg-green-400 absolute -left-10 w-10 h-full"
               ></div>
-            </ol>
+            </div>
           </li>
           <li
             class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
@@ -597,10 +674,10 @@
               alt="Pramuka Garuda"
               class="object-cover hover:opacity-75 transition duration-300 w-80 h-40 foto"
             />
-            <ol
+            <div
               class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
             >
-              <a href="#Project">
+              <a href="#Certification">
                 <p
                   class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
                 >
@@ -610,7 +687,7 @@
               <div
                 class="decor bg-green-400 absolute -left-10 w-10 h-full"
               ></div>
-            </ol>
+            </div>
           </li>
           <li
             class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
@@ -623,10 +700,10 @@
               alt="Lomba IOT"
               class="object-cover hover:opacity-75 transition duration-300 w-80 h-40 foto"
             />
-            <ol
+            <div
               class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
             >
-              <a href="#Project">
+              <a href="#Certification">
                 <p
                   class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
                 >
@@ -636,7 +713,7 @@
               <div
                 class="decor bg-green-400 absolute -left-10 w-10 h-full"
               ></div>
-            </ol>
+            </div>
           </li>
           <li
             class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
@@ -649,10 +726,10 @@
               alt="Panitia Jambore Ranting"
               class="object-cover hover:opacity-75 transition duration-300 w-80 h-40 foto"
             />
-            <ol
+            <div
               class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
             >
-              <a href="#Project">
+              <a href="#Certification">
                 <p
                   class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
                 >
@@ -662,7 +739,7 @@
               <div
                 class="decor bg-green-400 absolute -left-10 w-10 h-full"
               ></div>
-            </ol>
+            </div>
           </li>
           <li
             class="relative flex-none hover:opacity-75 dark:border-white transition duration-300 border border-black show-crt"
@@ -675,10 +752,10 @@
               alt="Kegiatan Berkunjung Omadata"
               class="object-cover hover:opacity-75 transition duration-300 w-80 h-40 foto"
             />
-            <ol
+            <div
               class="tecnology absolute bottom-0 right-0 flex pl-7 pr-2 bg-green-600 justify-end"
             >
-              <a href="#Project">
+              <a href="#Certification">
                 <p
                   class="w-max h-10 transition duration-300 hover:opacity-100 flex justify-center items-center font-bold"
                 >
@@ -688,32 +765,36 @@
               <div
                 class="decor bg-green-400 absolute -left-10 w-10 h-full"
               ></div>
-            </ol>
+            </div>
           </li>
         </ol>
       </section>
 
-      <section
+      <!-- <section
         id="Raport"
         data-aos="fade-up"
         data-aos-duration="1000"
         id="Contact"
-        class="w-full bg-slate-200 dark:bg-slate-400 m-auto py-5 px-4"
+        class="w-full container bg-slate-200 dark:bg-slate-400 m-auto py-5 px-4"
       >
-      <button class="w-full h-full font-bold text-2xl hover:bg-slate-800 transition duration-300 bg-black px-4 py-2">
-        Vocational School Report Card Value
-      </button>
-    </section>
-      
+        <a href="raport">
+          <button
+            class="w-full h-full font-bold text-2xl hover:bg-slate-800 hover:text-white transition duration-300 bg-amber-400 px-4 py-2"
+          >
+            Vocational School Report Card Value
+          </button>
+        </a>
+      </section> -->
+
       <section
         data-aos="fade-up"
         data-aos-duration="1000"
         id="Contact"
-        class="w-full bg-slate-400 dark:bg-slate-600 m-auto py-16 px-4 dark:text-black"
+        class="w-full container bg-slate-400 dark:bg-slate-600 m-auto py-16 px-4 dark:text-black"
       >
         <div class="w-full">
           <h2
-            class="w-full text-center text-2xl lg:text-3xl text-green-400 font-bold"
+            class="w-full text-center text-2xl md:text-3xl text-green-400 font-bold"
           >
             Contact
           </h2>
@@ -731,7 +812,7 @@
           class="w-full flex flex-wrap gap-2 justify-center my-10"
         >
           <div
-            class="w-full px-4 py-2 lg:px-0 lg:w-2/3 grid grid-cols-12 font-semibold"
+            class="w-full px-4 py-2 md:px-0 md:w-2/3 grid grid-cols-12 font-semibold"
           >
             <label for="Nama" class="dark:text-white col-span-2"> Name </label>
             <label for="Nama" class="dark:text-white">:</label>
@@ -745,7 +826,7 @@
             />
           </div>
           <div
-            class="w-full px-4 py-2 lg:px-0 lg:w-2/3 grid grid-cols-12 font-semibold"
+            class="w-full px-4 py-2 md:px-0 md:w-2/3 grid grid-cols-12 font-semibold"
           >
             <label for="Email" class="dark:text-white col-span-2">
               Email
@@ -761,7 +842,7 @@
             />
           </div>
           <div
-            class="w-full px-4 py-2 lg:px-0 lg:w-2/3 grid grid-cols-12 font-semibold"
+            class="w-full px-4 py-2 md:px-0 md:w-2/3 grid grid-cols-12 font-semibold"
           >
             <label for="Pesan" class="dark:text-white col-span-2">
               Message
@@ -777,10 +858,10 @@
               class="w-full col-span-9 px-2 py-1 focus:outline-0 focus:border-green-400 border border-transparent transition duration-300"
             ></textarea>
           </div>
-          <div class="w-full lg:w-2/3 flex justify-end">
+          <div class="w-full md:w-2/3 flex justify-end">
             <button
               type="submit"
-              class="text-white text-md lg:text-xl w-max px-4 py-2 bg-green-400 hover:border-transparent border-2 transition duration-300 hover:bg-green-500 hover:text-white font-semibold hover:italic border-green-300 rounded-full"
+              class="text-white text-md md:text-xl w-max px-4 py-2 bg-green-400 hover:border-transparent border-2 transition duration-300 hover:bg-green-500 hover:text-white font-semibold hover:italic border-green-300 rounded-full"
             >
               Submit
             </button>
@@ -788,9 +869,9 @@
         </form> -->
       </section>
 
-      <footer id="Footer" class="w-full bg-black text-white">
-        <div class="flex justify-center px-4 py-2 pb-20 text-sm lg:text-md">
-          <div class="w-1/2 lg:1/3 px-4">
+      <footer id="Footer" class="w-full container m-auto bg-black text-white">
+        <div class="flex justify-center px-4 py-2 pb-20 text-sm md:text-md">
+          <div class="w-1/2 md:1/3 px-4">
             <h2 class="font-bold text-2xl italic text-white my-4">
               Khasan<span class="text-green-500">port</span>
             </h2>
@@ -801,13 +882,13 @@
             <p class="ml-4">Province Jawa Tengah</p>
             <p class="ml-4">Indonesia</p>
           </div>
-          <div class="w-1/2 lg:1/3 px-4">
+          <div class="w-1/2 md:1/3 px-4">
             <h2 class="font-bold text-2xl italic text-white"></h2>
             <ol>
               <li></li>
             </ol>
           </div>
-          <div class="w-1/2 lg:1/3 px-4">
+          <div class="w-1/2 md:1/3 px-4">
             <h2 class="font-bold text-2xl italic text-white"></h2>
             <ol>
               <li></li>
@@ -817,18 +898,18 @@
         <div class="w-full flex flex-wrap justify-center items-center">
           <div class="w-full flex justify-center items-center">
             <div
-              class="my-2 flex items-center justify-center sm:justify-center gap-0 flex-wrap lg:flex-nowrap w-11/12 lg:w-2/5"
+              class="my-2 flex items-center justify-center sm:justify-center gap-0 flex-wrap md:flex-nowrap w-11/12 md:w-2/5"
             >
               <a
-                href="#"
+                href="https://www.youtube.com/@Khasan37"
                 target="_blank"
-                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 md:w-20 md:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
               >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="p-2 lg:p-4 scale-100 transition duuration-300 box-content fill-current"
+                  class="p-2 md:p-4 scale-150 md:scale-110 md:scale-100 transition duuration-300 box-content fill-current"
                   width="30"
                 >
                   <title>YouTube</title>
@@ -839,15 +920,15 @@
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/khasan_37/"
                 target="_blank"
-                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 md:w-20 md:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
               >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="p-2 lg:p-4 scale-100 transition duration-300 box-content fill-current"
+                  class="p-2 md:p-4 scale-150 md:scale-110 md:scale-100 transition duration-300 box-content fill-current"
                   width="30"
                 >
                   <title>Instagram</title>
@@ -858,15 +939,40 @@
               </a>
 
               <a
+                href="https://www.tiktok.com/@khasanport"
+                target="_blank"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 md:w-20 md:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="p-2 md:p-4 scale-150 md:scale-110 md:scale-100 transition duuration-300 box-content fill-current"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#2c3e50"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <title>Tiktok</title>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"
+                  />
+                </svg>
+              </a>
+
+              <a
                 href="wa.me/+6285793570703"
                 target="_blank"
-                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
+                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 md:w-20 md:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
               >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="p-2 lg:p-4 scale-100 transition duuration-300 box-content fill-current"
+                  class="p-2 md:p-4 scale-150 md:scale-110 md:scale-100 transition duuration-300 box-content fill-current"
                   width="30"
                 >
                   <title>WhatsApp</title>
@@ -875,37 +981,9 @@
                   />
                 </svg>
               </a>
-
-              <a
-                href="#"
-                target="_blank"
-                class="scale-75 w-10 h-10 p-1 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full flex justify-center items-center border border-secondary hover:bg-black hover:border-black hover:text-green-400 transition duration-300 opacity-70 hover:opacity-100"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="p-2 lg:p-5 transition duration-300 box-content scale-150"
-                >
-                  <title>Linked In</title>
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
-                  ></path>
-                  <path
-                    d="M8 11l0 5 M8 8l0 .01 M12 16l0 -5 M16 16v-3a2 2 0 0 0 -4 0"
-                  ></path>
-                </svg>
-              </a>
             </div>
           </div>
-          <h3 class="text-xs lg:text-lg my-4">
+          <h3 class="text-xs md:text-md my-4">
             @copyright by
             <span class="text-green-400 font-bold"> Adi Akhmad Khasan </span>
             with <span class="text-sky-400 font-bold">Tailwindcss</span>
@@ -913,10 +991,6 @@
         </div>
       </footer>
     </div>
-    <div class="show-raport fixed z-50 top-0 right-0 left-0 bottom-0 bg-black px-5 py-2">
-      Makanan
-    </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

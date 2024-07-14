@@ -1,6 +1,10 @@
+if ( localStorage.khasanport.lang == null || localStorage.khasanport.lang == undefined) {
+  localStorage.khasanport.lang = 'English'
+}
 const lang = document.getElementById("lang");
 const btnLang = document.getElementById("btnLang");
 btnLang.addEventListener("click", (e) => {
+  console.log('sd')
   lang.showPicker();
 });
 

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khasanport</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body class="bg-white">
+    <div class="container px-4 py-2">
+      <nav class="border px-4 py-2">
+        <h1
+          class="border w-full h-10 flex justify-center items-center m-auto text-xl font-bold"
+        >
+          Table Point
+        </h1>
+        <div class="chart-group border grid grid-cols-3 grid-flow-row">
+          <button class="btnChart border hover:bg-slate-200">Line</button>
+          <button class="btnChart border hover:bg-slate-200">Bar</button>
+          <button class="btnChart border hover:bg-slate-200">Donut</button>
+          <button class="btnChart border hover:bg-slate-200">Radar</button>
+          <button class="btnChart border hover:bg-slate-200">Buble</button>
+          <button class="btnChart border hover:bg-slate-200">Scatter</button>
+        </div>
+      </nav>
+      <main class="w-full h-full">
+        <div class="">
+          <canvas id="myChart"></canvas> <canvas id="chart_1"></canvas> <canvas id="chart_2"></canvas>
+        </div>
+      </main>
+    </div>
+    <script>
+      const ctx = document.getElementById("myChart");
+      const chart_1 = document.getElementById("chart_1");
+      const chart = document.getElementById("chart_2");
+
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [
+            "Semester 1",
+            "Semester 2",
+            "Semester 3",
+            "Semester 4",
+            "Semester 5",
+            "Semester 6",
+          ],
+          datasets: [
+            {
+              label: "PAI",
+              data: [87, 83, 90],
+              borderWidth: 1,
+              borderColor: "blue",
+              backgroundColor: "blue",
+            },
+            {
+              label: "PPKN",
+              data: [81, 85, 85],
+              borderWidth: 1,
+              borderColor: "orange",
+              backgroundColor: "orange",
+            },
+            {
+              label: "B. Indonesia",
+              data: [74, 84, 83],
+              borderWidth: 1,
+              borderColor: "green",
+              backgroundColor: "green",
+            },
+            {
+              label: "B. Inggris",
+              data: [79, 79, 83],
+              borderWidth: 1,
+              borderColor: "coklat",
+              backgroundColor: "coklat",
+            },
+            {
+              label: "B. Jawa",
+              data: [83, 89, 84],
+              borderWidth: 1,
+              borderColor: "gray",
+              backgroundColor: "gray",
+            },
+            {
+              label: "Matematika",
+              data: [77, 78, 82],
+              borderWidth: 1,
+              borderColor: "white",
+              backgroundColor: "white",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "top",
+            },
+            title: {
+              display: true,
+              text: "General Studies",
+            },
+          },
+        },
+      });
+
+      new Chart( chart_1, {
+        type: "line",
+        data: {
+          labels: [
+            "Semester 3",
+            "Semester 4",
+            "Semester 5",
+            "Semester 6",
+          ],
+          datasets: [
+            {
+              label: "Teknologi Jaringan",
+              data: [87, 83, 90],
+              borderWidth: 1,
+              borderColor: "blue",
+              backgroundColor: "blue",
+            },
+            {
+              label: "Administrasi Jaringan",
+              data: [81, 85, 85],
+              borderWidth: 1,
+              borderColor: "orange",
+              backgroundColor: "orange",
+            },
+            {
+              label: "Administrasi Sistem Jaringan",
+              data: [74, 84, 83],
+              borderWidth: 1,
+              borderColor: "green",
+              backgroundColor: "green",
+            },
+            {
+              label: "Teknologi Layanan Jaringan",
+              data: [79, 79, 83],
+              borderWidth: 1,
+              borderColor: "coklat",
+              backgroundColor: "coklat",
+            },
+            {
+              label: "Produk Kreatif Kewirausahaan",
+              data: [83, 89, 84],
+              borderWidth: 1,
+              borderColor: "gray",
+              backgroundColor: "gray",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "top",
+            },
+            title: {
+              display: true,
+              text: "Networking Studies",
+            },
+          },
+        },
+      });
+
+      new Chart(chart, {
+        type: "line",
+        data: {
+          labels: [
+            "Semester 1",
+            "Semester 2",
+          ],
+          datasets: [
+            {
+              label: "Sejarah",
+              data: [81, 85],
+              borderWidth: 1,
+              borderColor: "red",
+              backgroundColor: "red",
+            },
+            {
+              label: "Seni Budaya",
+              data: [81, 87],
+              borderWidth: 1,
+              borderColor: "black",
+              backgroundColor: "black",
+            },
+            {
+              label: "PJOK",
+              data: [81, 93],
+              borderWidth: 1,
+              borderColor: "yellow",
+              backgroundColor: "yellow",
+            },
+            {
+              label: "Siskomdig",
+              data: [86, 79],
+              borderWidth: 1,
+              borderColor: "purple",
+              backgroundColor: "purple",
+            },
+            {
+              label: "Fisika",
+              data: [75, 83],
+              borderWidth: 1,
+              borderColor: "pink",
+              backgroundColor: "pink",
+            },
+            {
+              label: "Kimia",
+              data: [81, 87],
+              borderWidth: 1,
+              borderColor: "sky",
+              backgroundColor: "sky",
+            },
+            {
+              label: "Sistem Komputer",
+              data: [81, 84, 3, 5, 2, 3],
+              borderWidth: 1,
+              borderColor: "blue",
+              backgroundColor: "blue",
+            },
+            {
+              label: "Komputer Jaringan",
+              data: [87, 77, 3, 5, 2, 3],
+              borderWidth: 1,
+              borderColor: "red",
+              backgroundColor: "red",
+            },
+            {
+              label: "Pemograman Dasar",
+              data: [89, 87, 3, 5, 2, 3],
+              borderWidth: 1,
+              borderColor: "green",
+              backgroundColor: "green",
+            },
+            {
+              label: "Desain Grafis",
+              data: [90, 84, 3, 5, 2, 3],
+              borderWidth: 1,
+              borderColor: "black",
+              backgroundColor: "black",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "top",
+            },
+            title: {
+              display: true,
+              text: "Another Lesson",
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
